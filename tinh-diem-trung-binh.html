@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseInt(prompt("Vật lý"));
+        let b = parseInt(prompt("Hóa học"));
+        let c = parseInt(prompt("Sinh học"));
+
+        function dtb(a, b, c) {
+            let DiemTrungBinh = (a + b + c) / 3;
+            return DiemTrungBinh;
+        }
+        let kq = dtb(a, b, c);
+        alert('Điểm trung bình là  ' + kq);
+
+        function tong(a,b,c) {
+            let Tong = (a + b + c);
+            return Tong;
+        }
+        let kq2 = tong(a,b,c);
+        alert('Tổng điểm là  ' + kq2);
+    </script>
+</body>
+
+</html>
