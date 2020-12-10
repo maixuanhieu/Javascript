@@ -12,33 +12,57 @@
             <b>Calculator</b> 
         </td>
     </tr>
-    <tr>
-        <td>
-        <input type="text" name="Số thứ nhất">
-        </td>
-        <td>
-        <input type="text" name="Số thứ hai">
-        </td>
-    </tr>
+    <form>    
+        <tr>
+            <td>
+            <input type="text" name="Số thứ nhất" id="number1">
+            </td>
+            <td>
+            <input type="text" name="Số thứ hai" id="number2">
+            </td>
+        </tr>
+    </form>    
 </table> 
 <table>
-    <tr>
-        <td>
-            <input type="button" value="Addition(+)">
-        </td>
-        <td>
-            <input type="button" value="Subtraction(-)">
-        </td>
-        <td>
-            <input type="button" value="Multiplication(X)">
-        </td>
-        <td>
-            <input type="button" value="Division(/)">
-        </td>
-    </tr>
-</table>   
+    <form>
+        <tr>
+            <td>
+                <input type="button" id="add" value="Addition(+)" onclick="pheptoan(this.id);">
+            </td>
+            <td>
+                <input type="button" id="sub" value="Subtraction(-)" onclick="pheptoan(this.id);" >
+            </td>
+            <td>
+                <input type="button" id="multi" value="Multiplication(X)" onclick="pheptoan(this.id);" >
+            </td>
+            <td>
+                <input type="button" id="divi" value="Division(/)" onclick="pheptoan(this.id);">
+            </td>
+        </tr>
+    </form>    
+</table>
+<p id="ketqua">
+</p>
 <script>
-    
+    function pheptoan(pt){
+    var a = Number(document.getElementById("number1").value);
+    var b = Number(document.getElementById("number2").value);
+    switch(pt){
+        case"add":
+            var pheptoan1 = a + b;
+            break;
+        case"sub":
+            var pheptoan1 = a - b;
+            break;
+        case"multi":
+            var pheptoan1 = a * b;
+            break;
+        case"divi":
+            var pheptoan1 = a / b;
+            break;    
+    }
+    document.getElementById("ketqua").innerHTML = pheptoan1;
+    }
 </script>
 </body>
 </html>
