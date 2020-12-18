@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game Puzzle</title>
+    <style>
+        img {
+            position: fixed;
+            right: 600px;
+            top: 0px;
+        }
+
+        button {
+            position: fixed;
+            right: 600px;
+            top: 200px;
+        }
+    </style>
 </head>
+
 <body>
-     <div class="container-fluid">
-        <div class="puzzles">
-          <img id="img1" src="./img/monkey_part1x1.jpg" alt="">
-          <img id="img2" src="./img/funny-cat1_part2x1.jpg" alt="">
-          <img id="img3" src="./img/funny-cat1_part3x1.jpg" alt="">
-          <img id="img4" src="./img/funny-cat1_part4x1.jpg" alt="">
-          <img id="img5" src="./img/panda_swap_part5x1.jpg" alt="">
-        </div>
-      </div>
-      <script type="text/javascript" src="./js/script.js"></script>
+    
+    <input type="image" src="image/Blank.png" width="400px" height="100px" id="manh1" onclick="change1()">
+    <br />
+    <input type="image" src="image/Blank.png" width="400px" height="100px" id="manh2" onclick="change2()">
+    <br />
+    <input type="image" src="image/Blank.png" width="400px" height="100px" id="manh3" onclick="change3()">
+    <br />
+    <img src="image/picture1 (800x600).png" width="300px" height="200px" id="pic1">
+    <!-- <img src="image/picture2 (800x600).png" width="300px" height="200px" id="pic2" >
+    <img src="image/picture3 (800x600).png" width="300px" height="200px" id="pic3"> -->
+    <button onclick="change()">Gợi ý</button> <br />
+
+    <audio controls autoplay>
+        <source src="image/Gurenge-Lisa-5948391.mp3" type="audio/mpeg">
+    </audio>
+    <!-- <script>
+        document.getElementById('autoplay').play();
+    </script> -->
+    <script src="game-puzzle.js"></script>
 </body>
+
 </html>
