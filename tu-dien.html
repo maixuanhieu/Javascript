@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Từ điển</title>
 </head>
+
 <body>
     <input type="text" id="text">
     <input type="button" value="Tìm kiếm" onclick="search()">
     <script>
         var eng = ['ball', 'soccer', 'stadium'];
         var vie = ['quả bóng', 'bóng đá', 'sân vận động'];
-        function search(){
-        var translate = (document.getElementById("text").value);
-        for (i=0; i < eng.length; i++) {
-            if (eng[i] == translate){
-                alert(vie[i]);
-                break;
+        function search() {
+            var translate = (document.getElementById("text").value);
+            for (i = 0; i < eng.length; i++) {
+                if (eng[i] == translate) {
+                    alert(vie[i]);
+                    return;
+                }
             }
             alert('Không có từ phù hợp');
-            break;
+
         }
-    }
     </script>
 </body>
+
 </html>
