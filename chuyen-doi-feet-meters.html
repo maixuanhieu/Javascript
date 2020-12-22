@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi Feet và Meters</title>
+</head>
+<body>
+    <label>Feet</label>
+    <input id="inputFeet" type="number" placeholder="Feet" oninput="Converter(this.value)" onchange="Converter(this.value)">
+<p>Meters: <span id="outputMeters"></span>
+</p>
+    <label>Meters</label>
+    <input type="inputMeters" type="number" placeholder="Meters" oninput="Converter1(this.value)" onchange="Converter1(this.value)">
+<p>Feet: <span id="outputFeet"></span>
+</p>
+
+
+
+
+<script>
+    function Converter(valNum){
+        valNum = parseFloat(valNum);
+        document.getElementById("outputMeters").innerHTML = (valNum / 3.279);
+    }
+
+    function Converter1(valNum1){
+        valNum1 = parseFloat(valNum1);
+        document.getElementById("outputFeet").innerHTML = (valNum1 / 0.305); 
+    }
+</script>
+</body>
+</html>
